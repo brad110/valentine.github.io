@@ -38,3 +38,26 @@ body {
   border-radius: 12px;
   border: 2px solid #ffe3e1;
 }
+
+.sticker {
+    position: fixed;
+    bottom: 100px;
+    left: 170px;
+
+    width: 150px;        /* size of sticker */
+    height: auto;
+
+    pointer-events: none; /* prevents blocking clicks */
+    user-select: none;
+
+    z-index: 998; /* below button but above page */
+}
+
+/* slightly smaller on phones */
+@media (max-width: 600px) {
+    .sticker {
+        width: 130px;
+        bottom: 80px;
+        left: 150px;
+    }
+}

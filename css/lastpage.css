@@ -33,3 +33,44 @@ body {
   border: 2px solid #ff9494;
   box-shadow: 1px 1px 2px #ffe3e1;
 }
+
+
+/* base sticker style */
+.side-sticker{
+    position: fixed;
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    z-index: 5;
+    opacity: 0.95;
+}
+
+/* left side */
+.left { left: 70px; }
+
+/* right side */
+.right { right: 40px; }
+
+/* vertical placement variations */
+.s1 { top: 15%; }
+.s2 { top: 45%; }
+.s3 { top: 75%; }
+
+/* floating animation */
+@keyframes floatSide {
+    0%   { transform: translateY(0px) rotate(-4deg); }
+    50%  { transform: translateY(-12px) rotate(4deg); }
+    100% { transform: translateY(0px) rotate(-4deg); }
+}
+
+.side-sticker {
+    animation: floatSide 4s ease-in-out infinite;
+}
+
+/* smaller on phones */
+@media (max-width: 700px){
+    .side-sticker{
+        width: 60px;
+    }
+}
