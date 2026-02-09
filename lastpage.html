@@ -6,8 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/flower.css" />
   </head>
+
+  <img src="minionflower.png" class="side-decor left-decor" alt="">
+  <img src="minionkissing.gif" class="side-decor right-decor" alt="">
+
+  
   <body>
-    <div id="thankyou"><b>Thank you for being my girlfriend</b></div>
+    <div id="thankyou"><b>Thanks for being my valetines :)</b></div>
     <div class="flower">
       <div class="f-wrapper">
         <div class="flower__line"></div>
@@ -58,5 +63,46 @@
       </div>
       <div class="flower__glass"></div>
     </div>
+
+    <button id="openLetterBtn" class="letter-btn">Open Letter 💌</button>
+
+    <!-- letter overlay -->
+    <div id="letterOverlay" class="letter-overlay">
+      <div class="letter-paper">
+        <span class="close-letter">&times;</span>
+
+        <h2>To You ❤️</h2>
+        <p>
+          Bello,
+
+I just wanted to say I love spending time with you. Every time we're together I feel so complete and everything on my mind feels lighter. I love the way you make me smile when I look at you. And I love your little cute pretty face I just want to eat it..  I appreciate every little thing you do for me and I want to say thank you for when I haven't. It's so crazy where we are today as we both weren't looking for it, but I'm really grateful for what we have and the genuine love we have for each other. I'm excited for the memories we will make in the future :).
+
+I want you to know how special you are to me, so I'll try my best to make this Valetine's day special to you. I'm so happy to call you mine on this special day. 
+
+        </p>
+
+        <p>
+          I hope this makes you smile, i lob you.
+          — boyfie
+        </p>
+      </div>
+    </div>
+
+
+    <script>
+    const btn = document.getElementById("openLetterBtn");
+    const overlay = document.getElementById("letterOverlay");
+    const close = document.querySelector(".close-letter");
+
+    btn.onclick = () => overlay.classList.add("show");
+    close.onclick = () => overlay.classList.remove("show");
+
+    // click outside paper closes it
+    overlay.addEventListener("click", e=>{
+      if(e.target === overlay) overlay.classList.remove("show");
+    });
+    </script>
+
+
   </body>
 </html>
